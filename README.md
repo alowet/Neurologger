@@ -16,7 +16,7 @@
 
 ## 📖 Documentation
 
-Full documentation is organized into multiple pages:
+Full documentation can be found here:
 
 - [Installation](docs/install.md)  
 - [Usage Guide](docs/usage.md)  
