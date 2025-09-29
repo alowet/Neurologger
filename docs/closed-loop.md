@@ -3,7 +3,8 @@
 
 The system provides multiple DSP and stimulation modes for real-time closed-loop experiments.
 
-[CLOSED-LOOP Filters](images/WIrelessEphys_Github_3_filterParams.jpg)
+One of the filter can be selected for one DSP channel (2 channels per system for now)
+![CLOSED-LOOP Filters](images/WIrelessEphys_Github_3_filterParams.jpg)
 
 ## DSP Modes
 - Disabled
