@@ -1,0 +1,11 @@
+
+site_name: WILD Documentation
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Installation: install.md
+  - Usage: usage.md
+  - Closed-loop Control: closed-loop.md
+  - File Format: file-format.md
+  - Development: development.md
