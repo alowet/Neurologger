@@ -1,4 +1,4 @@
-function CE32_PreProcess(filename,analogFile)
+function WILD_PreProcess(filename,analogFile)
 if(nargin<1)
     filename = uigetfile({'amplifier.dat','Select amplifier.dat'});
 end
@@ -165,4 +165,4 @@ try
 end
 
 %% IMU tracking
-CE64_processIMU(analogFile,100);
+WILD_processIMU(analogFile,100);
