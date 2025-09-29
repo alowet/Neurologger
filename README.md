@@ -37,7 +37,7 @@ WILD system board
 - PCB manufacturing and assembly (Gerber + BOM provided)
 [Download here](https://github.com/ayalab1/Neurologger/tree/main/PCB)  
 - Recommended PCB manufacturer: [NextPCB](https://www.nextpcb.com)
-- 3D printed baseplate
+- 3D printed baseplate:   [Download here](https://github.com/ayalab1/Neurologger/tree/main/3Dprint)  
 
 ### Firmware programming (first time to empty MCU)
 1. Connect 4-pin IO–USB cable (do not connect to PC yet).  
