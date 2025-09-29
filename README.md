@@ -42,7 +42,9 @@ Full documentation can be found here:
 ### Preparing for recording
 - Install WILD PC software:  
   [Download here](https://github.com/ayalab1/Neurologger/tree/main/Software)  
-- Format microSD card in WILD PC software (CE32 format).  
+- Format microSD card in WILD PC software (CE32 format).
+- Upload application image to SDcard, device will automatically upgrade during power-on from SDcard.
+  [Download here](https://github.com/ayalab1/Neurologger/tree/main/Firmware)  
 - Ensure battery is fully charged (check polarity on JST-SH2.0 connector).  
 
 ### Recording
