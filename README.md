@@ -1,7 +1,6 @@
 # WILD: Wireless, Interactive, Lightweight Datalogger 
 
-**WILD** (Wireless, Interactive, Lightweight Datalogger) is an open-source platform for **wireless, closed-loop electrophysiology and behavior monitoring** in freely moving small animals.  
-It integrates high-density electrophysiology, optogenetic stimulation, an inertial measurement unit (IMU), ultrasonic microphone, and head-mounted camera into a lightweight system for **multi-modal recording**.
+**WILD** (Wireless, Interactive, Lightweight Datalogger) is an open-source platform for **wireless, closed-loop electrophysiology and behavior monitoring** in freely moving small animals. It integrates high-density electrophysiology, optogenetic stimulation, an inertial measurement unit (IMU), ultrasonic microphone, and head-mounted camera into a lightweight system for **multi-modal recording**.
 
 ---
 
@@ -28,19 +27,7 @@ Full documentation is organized into multiple pages:
 
 ---
 
-## ⚙️ Operations
-
-The WILD GUI supports:
-
-- **Recording**: start/stop, real-time waveform visualization  
-- **Parameter settings**: sampling rate, filters, DSP mode, closed-loop logic  
-- **Download data**: decode CE32 filesystem, export to `.dat` and `.rhd` formats  
-- **Connect wirelessly**: Bluetooth Low Energy (BLE) device discovery, RSSI/voltage readout  
-- **Firmware upload**: program new firmware images onto the device via SD card  
-
----
-
-## 🖥 Device Operations (from [protocols.io manual](https://dx.doi.org/10.17504/protocols.io.ewov119n2vr2/v1))
+## 🖥 Quick start guide
 
 ### Device manufacturing
 - PCB manufacturing and assembly (Gerber + BOM provided)
@@ -67,20 +54,6 @@ The WILD GUI supports:
 - Use GUI **Download** function.  
 - Files exported as: `amplifier.dat`, `analogin.dat`, `digitalin.dat`, `supply.dat`, `adc.dat`, `time.dat`, `info.rhd`, `CE_params.bin`.  
 
----
-
-## 📂 File Format (summary)
-
-Each recording session produces:
-
-- `amplifier.dat` — neural signals (int16)  
-- `analogin.dat` — auxiliary analog inputs  
-- `digitalin.dat` — digital inputs  
-- `supply.dat` — supply voltage  
-- `adc.dat` — ADC channels  
-- `time.dat` — timestamps  
-- `info.rhd` — metadata (Intan-compatible header)  
-- `CE_params.bin` — system parameters  
 ---
 
 ## ⚠️ Disclaimer
