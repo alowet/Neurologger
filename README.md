@@ -30,7 +30,7 @@ Full documentation can be found here:
 
 ## 🖥 Quick start guide
 - WILD system board
-[WILD](docs/images/WIrelessEphys_Github_1_devicePicture.jpg)
+![WILD](docs/images/WIrelessEphys_Github_1_devicePicture.jpg)
 
 ### Device manufacturing
 - PCB manufacturing and assembly (Gerber + BOM provided)
