@@ -35,6 +35,7 @@ WILD system board
 
 ### Device manufacturing
 - PCB manufacturing and assembly (Gerber + BOM provided)
+[Download here](https://github.com/ayalab1/Neurologger/tree/main/PCB)  
 - Recommended PCB manufacturer: [NextPCB](https://www.nextpcb.com)
 - 3D printed baseplate
 
@@ -60,7 +61,8 @@ WILD system board
 ### Data downloading
 - Use GUI **Download** function.  
 - Files exported as: `amplifier.dat`, `analogin.dat`, `digitalin.dat`, `supply.dat`, `adc.dat`, `time.dat`, `info.rhd`, `CE_params.bin`.  
-
+- Post-processing scripts including data formatting, video generation, sensor-fusions are provided.
+[Download here](https://github.com/ayalab1/Neurologger/tree/main/Code)  
 ---
 
 ## ⚠️ Disclaimer
@@ -76,7 +78,6 @@ WILD system board
 - **Firmware & Embedded software**: Keil MDK, STM32CubeProgrammer  
 - **PC GUI / API**: Visual Studio (C#)  
 - **Machine learning integration**: Python, TensorFlow, ST Edge-AI  
-- **PCB manufacturer**: NextPCB  
 
 ---
 
