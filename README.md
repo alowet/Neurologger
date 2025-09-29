@@ -1,4 +1,4 @@
-# WILD: Wireless, Interactive, Lightweight Datalogger 
+## WILD: Wireless, Interactive, Lightweight Datalogger 
 
 **WILD** (Wireless, Interactive, Lightweight Datalogger) is an open-source platform for **wireless, closed-loop electrophysiology and behavior monitoring** in freely moving small animals. It integrates high-density electrophysiology, optogenetic stimulation, an inertial measurement unit (IMU), ultrasonic microphone, and head-mounted camera into a lightweight system for **multi-modal recording**.
 
