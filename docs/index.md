@@ -1,11 +1,11 @@
 
-# WILD: Wireless Integrated Logger Device
+# WILD: Wireless Interactive Lightweight Datalogger
 
 Welcome to the documentation for **WILD**, an open-source platform for 
 wireless, closed-loop electrophysiology in freely moving animals.
 
 ## Features
-- High-density neural recording (32/64 channels)
+- High-density neural recording (64 channels)
 - BLE-based control and real-time monitoring
 - Closed-loop stimulation with DSP filtering
 - SD-card logging in CE32 format
