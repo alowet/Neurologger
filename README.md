@@ -19,6 +19,7 @@
 Full documentation can be found here:
 
 - [Installation](docs/install.md)  
+- [Hardware](docs/hardware.md)
 - [Usage Guide](docs/usage.md)  
 - [Closed-loop Control](docs/closed-loop.md)
 - [TinyML(Under development for supporting user-compiled models)](docs/tinyML.md)
@@ -28,10 +29,13 @@ Full documentation can be found here:
 ---
 
 ## 🖥 Quick start guide
+- WILD system board
+[WILD](docs/images/WIrelessEphys_Github_1_devicePicture.jpg)
 
 ### Device manufacturing
 - PCB manufacturing and assembly (Gerber + BOM provided)
-- Recommended PCB manufacturer: NextPCB  
+- Recommended PCB manufacturer: [NextPCB](https://www.nextpcb.com)
+- 3D printed baseplate
 
 ### Firmware programming (first time to empty MCU)
 1. Connect 4-pin IO–USB cable (do not connect to PC yet).  

@@ -41,7 +41,7 @@ fwrite(fh_time,0:(Nsamples-1),'int32');
 fclose all;
 
 %generate info.rhd
-CE32_genIntanHeader(rec_info_file);
+WILD_genIntanHeader(rec_info_file);
 
 %generate amplifier.lfp
 
@@ -104,7 +104,7 @@ for dch = 1:size(dig_expanded,2)
 end
 
 %% auto correct stim flags
-[sys,dsp]=CE32_ReadHeader(strrep(filename,'amplifier.dat','CE_params.bin'));
+[sys,dsp]=WILD_ReadHeader(strrep(filename,'amplifier.dat','CE_params.bin'));
 for dch=[1 2 3 4]
     evt_file = strrep(filename,'amplifier.dat',['device_event.d' sprintf('%02d',dch) '.evt']);
     if(~isempty(dir(evt_file)))
