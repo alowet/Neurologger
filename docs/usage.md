@@ -5,7 +5,7 @@
 2. Format SD card using WILD_console. *Make sure WILD_console has Admin priviliage. Do not use SanDisk, we recommend Samsung EVO series(orange) or Lexar card. Avoid using high-speed SDcard as they consume much more power.
 3. Insert SD card to WILD.
 4. Connect battery. Device will start booting, a Blue LED will be on, indicating device started Ok and goes off to enter low power mode. If a firmware loaded to SD card, device will check the firmware image and start upgrading (LED will blink, it will take ~10s depends on the size of image).
-![OfflineInterface](images/WIrelessEphys_Github_5_offlineAPI.jpg)
+![IO config](images/WIrelessEphys_Github_6_Connectors.jpg)
 
 ## Connecting
 1. Launch **WILD_console.exe**
@@ -33,6 +33,7 @@
 ## Data Downloading
 1. Insert SD card
 2. Click **Save to Disk** and select the target folder. Data will be organized by recording ID and timestamp of recording start time.
+![OfflineInterface](images/WIrelessEphys_Github_5_offlineAPI.jpg)
 
 ## Post Processing
 We have provided several processing scripts for post-processing data.
