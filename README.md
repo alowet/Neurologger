@@ -21,7 +21,8 @@ Full documentation is organized into multiple pages:
 
 - [Installation](docs/install.md)  
 - [Usage Guide](docs/usage.md)  
-- [Closed-loop Control](docs/closed-loop.md)  
+- [Closed-loop Control](docs/closed-loop.md)
+- [TinyML(Under development for supporting user-compiled models)](docs/tinyML.md)
 - [File Format](docs/file-format.md)  
 - [Development](docs/development.md)  
 
@@ -53,7 +54,7 @@ The WILD GUI supports:
 
 ### Preparing for recording
 - Install WILD PC software:  
-  [Download here](https://github.com/ayalab1/Device_DataLogger/tree/main/Software)  
+  [Download here](https://github.com/ayalab1/Neurologger/tree/main/Software)  
 - Format microSD card in WILD PC software (CE32 format).  
 - Ensure battery is fully charged (check polarity on JST-SH2.0 connector).  
 
