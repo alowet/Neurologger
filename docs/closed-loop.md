@@ -3,9 +3,6 @@
 
 The system provides multiple DSP and stimulation modes for real-time closed-loop experiments.
 
-One of the filter can be selected for one DSP channel (2 channels per system for now)
-![CLOSED-LOOP Filters](images/WIrelessEphys_Github_3_filterParams.jpg)
-
 ## DSP Modes
 - Disabled
 - Single A
@@ -15,8 +12,10 @@ One of the filter can be selected for one DSP channel (2 channels per system for
 - Cascade A→B
 - Gated A & B
 - Random
-
+  
 ## Filters
+One of the filter can be selected for one DSP channel (2 channels per system for now)
+![CLOSED-LOOP Filters](images/WIrelessEphys_Github_3_filterParams.jpg)
 - Delta
 - Theta
 - Alpha
