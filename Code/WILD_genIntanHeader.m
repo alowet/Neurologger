@@ -1,4 +1,4 @@
-function CE32_genIntanHeader(filename)
+function WILD_genIntanHeader(filename)
 % save_Intan_RHD2000_file
 % Writes data into an Intan-compatible RHD2000 format file.
 %
@@ -9,7 +9,7 @@ if nargin<1
     [f,p]= uigetfile('CE_params.bin');
     filename=[p,f];
 end
-[sysParam,dsp]=CE32_ReadHeader(filename);
+[sysParam,dsp]=WILD_ReadHeader(filename);
 filename_output = strrep(filename,'CE_params.bin','info.rhd');
 fid = fopen(filename_output, 'w');
 if fid == -1
