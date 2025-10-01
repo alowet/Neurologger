@@ -1,4 +1,4 @@
-function CE32_genIntanHeader(filename)
+function WILD_genIntanHeader(filename)
 % save_Intan_RHD2000_file
 % Writes data into an Intan-compatible RHD2000 format file.
 %
