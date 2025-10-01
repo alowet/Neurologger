@@ -1,4 +1,4 @@
-function [sysParam,dspParam] = CE32_ReadHeader(filename)
+function [sysParam,dspParam] = WILD_ReadHeader(filename)
 if nargin <1
     [filename,p] = uigetfile('CE_params.bin');
     filename = fullfile(p,filename);

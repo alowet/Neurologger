@@ -1,8 +1,8 @@
 function WILD_PreProcess(filename,analogFile)
 if(nargin<1)
-    filename = uigetfile({'amplifier.dat','Select amplifier.dat'});
+    [filename, path] = uigetfile({'*'}, 'Select amplifier.dat', 'C:\Users\adaml\Documents\data\wild');
 end
-[path,f,e]=fileparts(filename);
+% [path,f,e]=fileparts(filename);
 
 if nargin<2
     analogFile = 'analogin.dat';
@@ -12,8 +12,9 @@ if isempty(p_analog)
     analogFile = fullfile(path,[fanalog,e]);
 end
   
-% filename = fullfile(path,"amplifier.dat");
+filename = fullfile(path,"amplifier.dat");
 analogfile = strrep(filename,'amplifier.dat','analogin.dat');
+audiofile = strrep(filename,'amplifier.dat','adc.dat');
 rec_info_file=strrep(filename,'amplifier.dat','CE_params.bin');
 fh=fopen(rec_info_file);
 rec_info=fread(fh,512/4,'unsigned long');
@@ -60,10 +61,10 @@ else
 end
 
 if length(ephys)>0
-    
+
     %     ephys = resample(ephys,fs_res,fs);
     misc =  readmulti_frank(analogfile,miscNch,1:miscNch,0,inf,'int16');
-    
+
     len  = min([length(ephys),length(misc)]);
     cat_data = zeros(len,Nch+miscNch);
     cat_data(:,1:Nch) = ephys(1:len,:);
@@ -85,7 +86,7 @@ for dch = 1:size(dig_expanded,2)
         evtname = char(strrep(filename,'amplifier.dat',['device_event.d' , sprintf('%02d',dch) , '.evt']));
         events.description = cell(length(trigger_starts),1);
         events.time = reshape([trigger_starts ; trigger_ends],1,[]);
-        
+
         for i = 1:length(trigger_starts)
             events.description{i,1} = [Eventname ' start ' num2str(dch)];
             events.description{i,2} = [Eventname ' end ' num2str(dch)];
@@ -98,7 +99,7 @@ for dch = 1:size(dig_expanded,2)
                 system(['del "' evtname '"']);
             end
         end
-        
+
         SaveEvents(evtname,events);
     end
 end
