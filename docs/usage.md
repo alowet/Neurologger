@@ -1,7 +1,9 @@
 
 # Usage Guide
 ## Pre-recording preparations
-1. Recharge battery
+1. Prepare/Recharge battery
+WILD integrated a DC/DC buck/boost converter and receive a wide input range from 2V-4.5V. Battery needs to ensure a minimal power required by the recording mode. Battery needs to supply >30mW peak power during booting.
+![Battery](images/WIrelessEphys_Github_9_batteries.jpg)
 2. Format SD card using WILD_console. *Make sure WILD_console has Admin priviliage. Do not use SanDisk, we recommend Samsung EVO series(orange) or Lexar card. Avoid using high-speed SDcard as they consume much more power.
 3. Insert SD card to WILD.
 4. Connect battery. Device will start booting, a Blue LED will be on, indicating device started Ok and goes off to enter low power mode. If a firmware loaded to SD card, device will check the firmware image and start upgrading (LED will blink, it will take ~10s depends on the size of image).
