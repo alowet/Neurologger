@@ -9,7 +9,7 @@ if nargin<1
     [f,p]= uigetfile('CE_params.bin');
     filename=[p,f];
 end
-[sysParam,dsp]=CE32_ReadHeader(filename);
+[sysParam,dsp]=WILD_ReadHeader(filename);
 filename_output = strrep(filename,'CE_params.bin','info.rhd');
 fid = fopen(filename_output, 'w');
 if fid == -1
