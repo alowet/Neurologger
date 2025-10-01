@@ -30,8 +30,14 @@ Full documentation can be found here:
 
 ## 🖥 Quick start guide
 WILD system board
-![System schematics](docs/images/WIrelessEphys_Github_2_deviceDiagram.jpg)
 ![WILD](docs/images/WIrelessEphys_Github_1_devicePicture.jpg)
+
+Connector definitions
+![Connectors](docs/images/WIrelessEphys_Github_8_connectors.jpg)
+
+WILD system diagram
+![System schematics](docs/images/WIrelessEphys_Github_2_deviceDiagram.jpg)
+
 
 ### Device manufacturing
 - PCB manufacturing and assembly (Gerber + BOM provided)
@@ -41,8 +47,8 @@ WILD system board
 
 ### Firmware programming (first time to empty MCU)
 1. Connect 4-pin IO–USB cable (do not connect to PC yet).  
-2. Short bootmode IO pins to enter DFU mode.  
-3. Connect USB cable to PC.  
+2. Short DFU model select pin to VDD(with a metal tweezer for shorting) to enter DFU mode.  
+3. Connect USB cable to PC while shorting VDD and model select pin, once powered up, you can release the tweezer.  
 4. In **STM32CubeProgrammer**, flash the bootloader firmware.  
 
 ### Preparing for recording
