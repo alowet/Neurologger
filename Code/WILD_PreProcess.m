@@ -116,8 +116,8 @@ for dch=[1 2 3 4]
     if(~isempty(dir(evt_file)))
         triggers = LoadEvents(evt_file);
         triggers = triggers.time(1:2:end);
-        stim_on = LoadEvents(strrep(filename,'amplifier.dat','device_event.d14.evt'));
-        stim_on = stim_on.time(1:2:end);
+%         stim_on = LoadEvents(strrep(filename,'amplifier.dat','device_event.d14.evt'));
+%         stim_on = stim_on.time(1:2:end);
         % only use triggers after CL ready(last)
         stim_triggers = [];
 %         triggers(triggers<stim_on(end))=[];
