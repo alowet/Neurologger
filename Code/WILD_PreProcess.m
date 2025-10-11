@@ -1,8 +1,10 @@
 function WILD_PreProcess(filename,analogFile)
 if(nargin<1)
-    [filename, path] = uigetfile({'*'}, 'Select amplifier.dat', 'C:\Users\adaml\Documents\data\wild');
+    [filename, path] = uigetfile({'amplifier.dat','amplifier.dat'}, 'Select amplifier.dat', 'C:\Users\adaml\Documents\data\wild');
+    filename = fullfile(path,"amplifier.dat");
 end
-% [path,f,e]=fileparts(filename);
+
+[path,f,e]=fileparts(filename);
 
 if nargin<2
     analogFile = 'analogin.dat';
@@ -12,14 +14,16 @@ if isempty(p_analog)
     analogFile = fullfile(path,[fanalog,e]);
 end
   
-filename = fullfile(path,"amplifier.dat");
+
 analogfile = strrep(filename,'amplifier.dat','analogin.dat');
 audiofile = strrep(filename,'amplifier.dat','adc.dat');
 rec_info_file=strrep(filename,'amplifier.dat','CE_params.bin');
-fh=fopen(rec_info_file);
-rec_info=fread(fh,512/4,'unsigned long');
-fs_raw=rec_info(1);
-Nch=rec_info(3);
+
+sysparam = CE32_ReadHeader(fullfile(path,'CE_params.bin'));
+% fh=fopen(rec_info_file);
+% rec_info=fread(fh,512/4,'unsigned long');
+fs_raw=sysparam.fs;
+Nch=sysparam.Nch;
 if(fs_raw==0)
     fs=1250;
     Nch=2;
@@ -82,7 +86,8 @@ for dch = 1:size(dig_expanded,2)
     dig_diff = diff([0 dig_expanded(:,dch)' 0]);
     trigger_starts = find(dig_diff==1)/fs_res;
     trigger_ends= find(dig_diff==-1)/fs_res;
-    if(length(trigger_starts)>0)
+    
+    if(length(trigger_starts)>1)
         evtname = char(strrep(filename,'amplifier.dat',['device_event.d' , sprintf('%02d',dch) , '.evt']));
         events.description = cell(length(trigger_starts),1);
         events.time = reshape([trigger_starts ; trigger_ends],1,[]);
