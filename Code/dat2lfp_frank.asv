@@ -33,17 +33,11 @@ for f_idx=1:length(f_all)
     path = fileparts(f);
     ce_param_file = fullfile(path,'CE_params.bin');
     xml_file = fullfile(path,'amplifier.xml');
-    if(exist(ce_param_file,"file"))
-        sysparam = WILD_ReadHeader(ce_param_file);
-        Nch = sysparam.Nch;
-        fs = sysparam.fs;
+    if(exist(xml_file,"file"))
+    [Nch,fs,Nsamples,ch_sel,good_ch,time_bin]=DAT_xmlread([f]);
     else
-        if(exist(xml_file,"file"))
-            [Nch,fs,Nsamples,ch_sel,good_ch,time_bin]=DAT_xmlread([f]);
-        else
-        end
-    end
-
+        if()
+    ratio=fs/1250;
     %     data_res=zeros(Nsamples/ratio+1,Nch);
     data_temp_cell=cell(Nch,1);
     parfor idx=1:Nch
